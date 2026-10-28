@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff">
+<meta name="description" content="看一句，听一句，跟着说。"><title>The Intern · 电影跟读</title>
+<link rel="icon" href="assets/design/brand-mobile.svg"><link rel="preload" href="assets/inter.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app" id="app" tabindex="-1" data-mode="paused" aria-label="电影英语跟读">
+<header class="header"><button id="home" class="home brand" aria-label="返回片段列表"><img class="brand-mobile" src="assets/design/brand-mobile.svg" width="46" height="24" alt=""><img class="brand-tablet" src="assets/design/brand-tablet.svg" width="62" height="32" alt=""></button></header>
+<section class="player" aria-label="电影视频"><div class="video-frame"><video id="video" playsinline webkit-playsinline preload="metadata" aria-label="电影原声"></video><img id="poster" class="video-poster" alt="电影片段封面"><button id="video-hit" class="video-hit" aria-label="播放视频"></button></div><div class="video-progress" role="progressbar" aria-label="视频进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="video-progress"></span></div></section>
+<section class="practice" aria-label="台词与跟读"><div id="transcript" class="transcript" tabindex="0" aria-label="上下滑动选择台词"></div>
+<footer class="footer"><div class="actions" id="actions">
+<button class="speak" id="speak" aria-label="开始跟读" aria-pressed="false"><img class="wave-idle" src="assets/design/waveform.svg" width="28" height="20" alt=""><span class="wave-live" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+<button class="transport" id="transport" aria-label="继续播放"><img class="play-icon" src="assets/design/play.svg" width="16" height="11" alt=""><span class="pause-icon" aria-hidden="true"></span><img class="close-icon" src="assets/design/close.svg" width="16" height="16" alt=""></button></div>
+<nav class="navigation" aria-label="切换视频"><button class="previous" id="previous" aria-label="上一段视频"><img src="assets/design/arrow-prev.svg" width="40" height="40" alt=""><span id="previous-number"></span></button><div class="duration" id="duration" aria-label="视频总时长">00:00</div><button class="next" id="next" aria-label="下一段视频"><span id="next-number"></span><img src="assets/design/arrow-next.svg" width="40" height="40" alt=""></button></nav>
+</footer></section></main>
+<main id="library" tabindex="-1" class="library" aria-label="片段列表" hidden>
+<header class="library-header"><h1>The Intern</h1><p>2015</p><button id="open-menu" class="library-menu" aria-label="打开电影菜单"><img src="assets/design/menu.svg" width="40" height="40" alt=""></button><span id="clip-count" class="item-count" aria-label="片段数量"></span></header>
+<div id="course-list" class="course-list"></div>
+</main>
+<main id="movie-menu" tabindex="-1" class="movie-menu" aria-label="电影菜单" hidden>
+<header class="library-header"><h1>The Intern</h1><p>2015</p><button id="close-menu" class="library-menu" aria-label="关闭电影菜单"><img src="assets/design/menu-close.svg" width="40" height="40" alt=""></button><span class="item-count" aria-label="电影数量">1</span></header>
+<div id="movie-list" class="movie-list"></div>
+<button id="menu-brand" class="menu-brand" aria-label="返回片段列表"><img src="assets/design/brand-mobile.svg" width="46" height="24" alt=""></button>
+</main>
+<div class="notice" id="notice" role="status" hidden></div>
+<script src="courses.js"></script><script type="module" src="app.js"></script>
+</body></html>
